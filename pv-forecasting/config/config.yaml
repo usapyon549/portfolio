@@ -1,0 +1,62 @@
+# ========================
+# data
+# ========================
+data:
+  # 元データ
+  raw:
+    path_weather: "../data/raw/"
+    read_cols: ["Year", "Month", "Day", "Hour", "Minute", "Temperature", "Clearsky GHI", "Cloud Type", "Dew Point", "DHI", "DNI",
+       "Fill Flag", "GHI", "Relative Humidity", "Solar Zenith Angle","Surface Albedo", "Pressure", "Precipitable Water", "Wind Direction",
+       "Wind Speed"]
+
+  # 特徴量後データ
+  processed:
+    path_train: "../data/processed/train.csv"
+    path_val: "../data/processed/val.csv"
+    path_test: "../data/processed/test.csv"
+
+    # ========================
+# features
+# ========================
+features:
+  target_col: "pv"
+  feature_cols:
+    - "GHI"
+    - "Temperature"
+    - "day_of_year_sin"
+    - "day_of_year_cos"
+    - "hour_jst_sin"
+    - "hour_jst_cos"
+
+# ========================
+# model
+# ========================
+model:
+  name: "lightgbm"
+  params:
+    num_leaves: 119 
+    max_depth: 8 
+    learning_rate: 0.036817263301879184 
+    n_estimators: 381
+    min_data_in_leaf: 20 
+    feature_fraction: 0.9788376078847812
+    bagging_fraction: 0.9736239525004701
+    bagging_freq: 5
+    lambda_l1: 0.013666316644891024
+    lambda_l2: 2.3727637140778928
+    random_state: 42
+
+# ========================
+# training
+# ========================
+training:
+  train_start: "2016-01-01"
+  val_start: "2019-01-01"
+  test_start: "2020-01-01"
+
+# ========================
+# output
+# ========================
+output:
+  path_model: "../models/model.pkl"
+  path_pred: "../outputs/predictions.csv"

@@ -1,0 +1,14 @@
+
+
+data:
+  raw:
+    file_path: "../data/yahoo_comments_renumbering.csv"
+
+api_settings:
+  model_name: "gemini-3-flash-preview"
+  generation_config: 
+    {"temperature": 0.2, "max_output_tokens": 1500}
+  batch_size: 5
+
+output:
+  dir_labeled: "../data/gemini_response"
