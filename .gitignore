@@ -9,8 +9,9 @@ __pycache__/
 
 # Raw data / trained models
 # (large files or non-public data)
-**/data/
+**/data/*
 !**/data/sample/
+!**/data/sample/**
 !**/data/README.md
 **/models/
 
