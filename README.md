@@ -135,7 +135,8 @@ portfolio/
 # Additional Experiments
 
 portfolio とは別に、  
-技術検証用リポジトリ `ml-lab` も運用しています。
+技術検証用リポジトリ `ml-lab` も運用しています。  
+[ml-labはこちら](https://github.com/usapyon549/ml-lab)
 
 現在は、
 
