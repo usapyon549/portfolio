@@ -128,3 +128,20 @@ portfolio/
 ├── weather-classification/
 ├── sns-comment-analysis/
 └── README.md
+```
+
+---
+
+# Additional Experiments
+
+portfolio とは別に、  
+技術検証用リポジトリ `ml-lab` も運用しています。
+
+現在は、
+
+- MLflowを活用した、軽量MLOps
+- Docker 化
+- SageMaker deploy
+- 軽量 RAG
+
+など、技術の検証を進めています。

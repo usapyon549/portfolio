@@ -19,7 +19,10 @@ __pycache__/
 **/メモ.txt
 
 # vscode
-**/.vscode
+**/.vscode/
+
+# macOS
+.DS_Store
 
 # C extensions
 *.so
