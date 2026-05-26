@@ -140,9 +140,11 @@ portfolio とは別に、
 
 現在は、
 
-- MLflowを活用した、軽量MLOps
-- Docker 化
-- SageMaker deploy
-- 軽量 RAG
+- 実績値を用いた電力需要予測
+- MLflow experiment tracking
+- Docker container 化(FastAPIの実装含む)
+- SageMaker custom inference container
+- SageMaker Serverless Endpoint deploy
+- bankig-marketingの分類予測
 
 など、技術の検証を進めています。
