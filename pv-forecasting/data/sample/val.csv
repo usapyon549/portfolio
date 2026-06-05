@@ -1,0 +1,3 @@
+pv,GHI,Temperature,day_of_year_sin,day_of_year_cos,hour_jst_sin,hour_jst_cos
+0.0,0.0,-1.1,0.0,1.0,0.0,1.0
+1.0,2.1,1.0,0.0,1.0,1.0,0.0

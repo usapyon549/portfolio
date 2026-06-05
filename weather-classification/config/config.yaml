@@ -1,0 +1,78 @@
+---
+# 元データのファイルパス指定。src/においたスクリプトファイルからの相対パスの想定。
+path_raw_data:
+  dir_path_WIR: "../data/raw/Weather Image Recognition"
+  dir_path_WDFIC: "../data/raw/Weather Dataset for Image Classification"
+
+# クラスをマージしてデータセットを作成する際の、再定義後のファイルパス指定。src/においたスクリプトファイルからの相対パスの想定。
+path_processed_data: "../data/processed"
+
+# アンダーサンプリングした後の画像置き場
+path_processed_data_undersampling: "../data/processed/undersampling"
+
+# 関係のあるクラスを直接抽出してデータセットを作成する際の、抽出後のファイルパス指定。src/においたスクリプトファイルからの相対パスの想定。
+path_extracted_data: "../data/extracted/all"
+
+# 直接抽出データを学習、テストデータに分ける。このテストデータはモデル比較の際に使う共通テストデータにする。
+path_split_extracted_data:
+  dir: "../data/extracted/split"
+  train: "../data/extracted/split/tarin"
+  val: "../data/extracted//split/val"
+  common_test: "../data/extracted/split/common_test"
+
+# クラスの再定義の設定
+class_mapping:
+  name_list: ["sunny", "cloudy", "rain", "snow"]
+
+# Weather Image Recognitionのデータセットのクラス再定義設定
+WIR_class_mapping:
+  lightning: "rain"
+  sandstorm: "not use"
+  glaze: "not use"
+  rain: "rain"
+  rime: "snow"
+  frost: "snow"
+  fogsmog: "cloudy"
+  hail: "rain"
+  dew: "not use"
+  rainbow: "not use"
+  snow: "snow"
+
+# Weather Dataset for Image Classificationのデータセットのクラス再定義設定
+WDFIC_class_mapping:
+  sunrise: "sunny" 
+  cloudy: "cloudy" 
+  shine: "sunny" 
+  rain: "rain"
+
+# Weather Image Recognitionのデータセットのクラス抽出の設定
+WIR_class_extracting:
+  snow: "snow"
+  rain: "rain"
+
+WDFIC_class_extracting:
+  cloudy: "cloudy" 
+  shine: "sunny" 
+  rain: "rain"
+
+random_seed: 42
+
+
+load_file_settings:
+    # 画像サイズは、efficientnet b0の想定
+    img_height: 224
+    img_width: 224
+    batch_size: 16
+
+train_settings:
+  epoch: 1 #動作確認用
+  # epoch: 15
+  # lr: 1e-3
+
+  # ========================
+# output
+# ========================
+output:
+  path_model: "../models/model.keras"
+  path_history: "../models/history.pkl"
+  path_result: "../outputs/result.csv"
